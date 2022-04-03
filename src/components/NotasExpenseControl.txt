@@ -1,0 +1,49 @@
+Cambiando el formato de número:
+De 6000 a $6,000.00
+const cantidad = 6000;
+cantidad.toLocaleString('en-US', {style: 'currency', currency:'USD'})
+
+Método útil en react porque no muta el state original
+
+
+
+
+{/* { condit1 && condit2 && 
+			<>
+				<h2>Dani estuvo aquí</h2>
+				<h2>María estuvo allá</h2>
+			</>
+		} */}
+		{ condit1 && condit2 ?( 
+			<>
+				<h2>Dani estuvo aquí</h2>
+				<h2>María estuvo allá</h2>
+			</>) : null
+		}
+		{"hola"}
+		{true}
+		{false}
+		{null}
+		{undefined}
+		{"adios"}
+					{/* Manera 1 de hacerlo: */}
+							{/* { !condit1 && condit2 && 
+								<>
+									<h2>Dani estuvo aquí</h2>
+								</>
+							}
+							{ condit1 && condit2 && 
+								<>
+									<h2>María estuvo allá</h2>
+								</>
+							} */}
+
+					{/* Manera 2 de hacerlo: */}
+							{/* { condit2 && (
+								condit1 
+									? <h2>María estuvo allá</h2>
+									: <h2>Dani estuvo aquí</h2>
+							)}
+							*/}
+							<button onClick={() => setCondit1(!condit1)}>1 {condit1 ? 'true' : 'false'}</button>
+		<button onClick={() => setCondit2(!condit2)}>2 {condit2 ? 'true' : 'false'}</button>
