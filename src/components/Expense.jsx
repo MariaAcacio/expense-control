@@ -34,7 +34,7 @@ const Expense = ({expense, setEditExpense, eliminateExpense}) => {
 	const leadingActions = () => (
 		<LeadingActions>
 			<SwipeAction onClick={() => setEditExpense(expense)}>
-				Editar
+				Edit
 			</SwipeAction>
 		</LeadingActions>
 	)
@@ -44,7 +44,7 @@ const Expense = ({expense, setEditExpense, eliminateExpense}) => {
 				onClick={() => eliminateExpense(id)}
 				destructive={true}
 			>
-				Eliminar
+				Delete
 			</SwipeAction>
 		</TrailingActions>
 	)
